@@ -51,14 +51,7 @@ if (isset($_POST['nomRecherche'])) {
         }
 
         li {
-            border: 1px solid #ccc;
-            padding: 10px;
             margin-bottom: 10px;
-            background-color: #f5f5f5;
-        }
-
-        li:hover {
-            background-color: #e0e0e0;
         }
 
         strong {
@@ -81,7 +74,7 @@ if (isset($_POST['nomRecherche'])) {
                     <strong>Nom de la recette:</strong> <?php echo $recetteCherchee['name']; ?><br>
                     <strong>Description:</strong> <?php echo $recetteCherchee['description']; ?><br>
                     <strong>Email de l'auteur:</strong> <?php echo $recetteCherchee['email']; ?><br>
-                    <strong>Est complete:</strong> <?php echo $recetteCherchee['isEnabled'] ? 'Oui' : 'Non'; ?>
+                    <strong>Est complète:</strong> <?php echo $recetteCherchee['isEnabled'] ? 'Oui' : 'Non'; ?>
                 </li>
             <?php else: ?>
                 <li>Aucune recette trouvée pour "<?php echo $nomRecherche; ?>"</li>
@@ -90,9 +83,7 @@ if (isset($_POST['nomRecherche'])) {
             <?php foreach ($recipes as $recipe): ?>
                 <li>
                     <strong>Nom de la recette:</strong> <?php echo $recipe['name']; ?><br>
-                    <strong>Description:</strong> <?php echo $recipe['description']; ?><br>
-                    <strong>Email de l'auteur:</strong> <?php echo $recipe['email']; ?><br>
-                    <strong>Est complete:</strong> <?php echo $recipe['isEnabled'] ? 'Oui' : 'Non'; ?>
+                    <strong>Est complète:</strong> <?php echo $recipe['isEnabled'] ? 'Oui' : 'Non'; ?>
                 </li>
             <?php endforeach; ?>
         <?php endif; ?>
