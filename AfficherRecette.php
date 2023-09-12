@@ -13,13 +13,13 @@ $recipes = [
         'name' => 'Cassoulet',
         'description' => 'Je ne sais pas donc je mets n\'importe quoi',
         'email' => 'mickael.andrieu@exemple.com',
-        'isVegetarian' => true,
+        'isEnabled' => true,
     ],
     [
         'name' => 'Couscous',
         'description' => '[...]',
         'email' => 'mickael.andrieu@exemple.com',
-        'isVegetarian' => true,
+        'isEnabled' => true,
     ],
 ];
 
@@ -81,7 +81,7 @@ if (isset($_POST['nomRecherche'])) {
                     <strong>Nom de la recette:</strong> <?php echo $recetteCherchee['name']; ?><br>
                     <strong>Description:</strong> <?php echo $recetteCherchee['description']; ?><br>
                     <strong>Email de l'auteur:</strong> <?php echo $recetteCherchee['email']; ?><br>
-                    <strong>Vegetarienne:</strong> <?php echo $recetteCherchee['isVegetarian'] ? 'Oui' : 'Non'; ?>
+                    <strong>Est complete:</strong> <?php echo $recetteCherchee['isEnabled'] ? 'Oui' : 'Non'; ?>
                 </li>
             <?php else: ?>
                 <li>Aucune recette trouvée pour "<?php echo $nomRecherche; ?>"</li>
@@ -92,7 +92,7 @@ if (isset($_POST['nomRecherche'])) {
                     <strong>Nom de la recette:</strong> <?php echo $recipe['name']; ?><br>
                     <strong>Description:</strong> <?php echo $recipe['description']; ?><br>
                     <strong>Email de l'auteur:</strong> <?php echo $recipe['email']; ?><br>
-                    <strong>Vegetarienne:</strong> <?php echo $recipe['isVegetarian'] ? 'Oui' : 'Non'; ?>
+                    <strong>Est complete:</strong> <?php echo $recipe['isEnabled'] ? 'Oui' : 'Non'; ?>
                 </li>
             <?php endforeach; ?>
         <?php endif; ?>
